@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name: Parse-CVSEntries
-version: 0.01
+version: 0.02
 license: perl
 distribution_type: module
 requires:
@@ -12,8 +12,8 @@ conflicts: {}
 provides:
   Parse::CVSEntries:
     file: lib/Parse/CVSEntries.pm
-    version: 0.01
+    version: 0.02
   Parse::CVSEntry:
     file: lib/Parse/CVSEntries.pm
-    version: 0.01
+    version: 0.02
 generated_by: Module::Build version 0.18

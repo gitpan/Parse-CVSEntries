@@ -1,4 +1,4 @@
-README for Parse::CVSEntries 0.01
+README for Parse::CVSEntries 0.02
 
 =head1 NAME
 
@@ -33,6 +33,11 @@ and if all goes well
 What changed over the last 3 revisions
 
 =over
+
+=item 0.02	Thursday 26th June, 2003
+
+	Fixed MANIFEST to include module_build_entries
+
 
 =item 0.01	Wednesday 25th June, 2003
 
