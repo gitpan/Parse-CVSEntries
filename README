@@ -1,0 +1,56 @@
+README for Parse::CVSEntries 0.01
+
+=head1 NAME
+
+Parse::CVSEntries - parse a CVS/Entries file
+
+=head1 SYNOPSIS
+
+ my $parsed = Parse::CVSEntries->new( 'CVS/Entries' );
+ for my $entry ($parsed->entries) {
+     print $entry->name, " ", $entry->version, "\n";
+ }
+
+
+=head1 DEPENDENCIES
+
+This module has external dependencies on the following modules:
+
+ Class::Accessor::Fast
+ Test::More
+
+=head1 INSTALLATION
+
+ perl Build.PL
+ perl Build test
+
+and if all goes well
+
+ perl Build install
+
+=head1 HISTORY
+
+What changed over the last 3 revisions
+
+=over
+
+=item 0.01	Wednesday 25th June, 2003
+
+	Initial CPAN release
+=back
+
+=head1 AUTHOR
+
+Richard Clamp <richardc@unixbeard.net>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003 Richard Clamp.  All Rights Reserved.
+
+This module is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
+=head1 SEE ALSO
+
+L<File::Find::Rule::CVS>, cvs(1)
+
