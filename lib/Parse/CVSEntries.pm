@@ -1,6 +1,7 @@
 use strict;
 package Parse::CVSEntries;
-our $VERSION = '0.02';
+use vars qw( $VERSION );
+$VERSION = '0.03';
 
 =head1 NAME
 
@@ -70,15 +71,20 @@ All of these are just simple data accessors.
 
 =head2 modified
 
+=head2 mtime
+
+C<modified> as epoch seconds
+
 =cut
 
 package Parse::CVSEntry;
+use Class::Accessor::Fast;
 use base 'Class::Accessor::Fast';
 use Date::Parse qw( str2time );
 
 # the actual fields in the file
 my @fields = qw( dir name version modified bar baz );
-__PACKAGE__->mk_accessors( @fields );
+__PACKAGE__->mk_accessors( @fields, qw( mtime ) );
 
 sub new {
     my $class = shift;
@@ -86,7 +92,10 @@ sub new {
 
     my %self;
     @self{ @fields } = split /\//, $_;
-    $class->SUPER::new(\%self);
+    my $new = $class->SUPER::new(\%self);
+
+    $new->mtime( str2time $new->modified, "UTC" );
+    return $new;
 }
 
 1;

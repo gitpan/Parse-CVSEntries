@@ -1,4 +1,4 @@
-README for Parse::CVSEntries 0.02
+README for Parse::CVSEntries 0.03
 
 =head1 NAME
 
@@ -17,6 +17,7 @@ Parse::CVSEntries - parse a CVS/Entries file
 This module has external dependencies on the following modules:
 
  Class::Accessor::Fast
+ Date::Parse
  Test::More
 
 =head1 INSTALLATION
@@ -33,6 +34,13 @@ and if all goes well
 What changed over the last 3 revisions
 
 =over
+
+=item 0.03	Thursday 11th September, 2003
+
+	->mtime accessor
+	backport to 5.00503
+	made the Date::Parse dependency explicit
+
 
 =item 0.02	Thursday 26th June, 2003
 
